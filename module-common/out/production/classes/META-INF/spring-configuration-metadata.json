@@ -1,0 +1,18 @@
+{
+  "groups": [
+    {
+      "name": "spring.datasource.read-only.hikari",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.mss.fashion.common.config.database.RoutingDataBaseConfig",
+      "sourceMethod": "readOnlyDataSource()"
+    },
+    {
+      "name": "spring.datasource.read-write.hikari",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.mss.fashion.common.config.database.RoutingDataBaseConfig",
+      "sourceMethod": "readWriteDataSource()"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}

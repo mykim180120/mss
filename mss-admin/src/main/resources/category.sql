@@ -1,0 +1,1 @@
+INSERT INTO CATEGORY (category_type) VALUES ('TOP'), ('OUTER'), ('BOTTOM'), ('SNEAKERS'), ('BAG'), ('HAT'), ('SOCKS'), ('ACCESSORY');

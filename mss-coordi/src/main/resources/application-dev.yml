@@ -1,0 +1,63 @@
+# Default, Common properties of all environments
+server:
+  port: 8100
+spring:
+  mvc:
+    throw-exception-if-no-handler-found: true
+  web:
+    resources:
+      add-mappings: false
+  jpa:
+    show-sql: false
+  main:
+    banner-mode: off
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'health'
+springdoc:
+  swagger-ui:
+    url: /docs/openapi.yaml
+    path: /apidoc
+  api-docs:
+    enabled: false
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    root: info
+    web: info
+    sql: error
+    com.zaxxer: error
+    org.hibernate: error
+    org.hibernate.SQL: error
+    org.springframework: error
+    com.mss: info
+---
+# dev environment
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    read-write:
+      hikari:
+        jdbc-url: jdbc:h2:mem:test;DB_CLOSE_ON_EXIT=FALSE
+        username: sa
+        password: password
+        driver-class-name: org.h2.Driver
+        pool-name: 'read-write-pool'
+    read-only:
+      hikari:
+        jdbc-url: jdbc:h2:mem:test;DB_CLOSE_ON_EXIT=FALSE
+        username: sa
+        password: password
+        driver-class-name: org.h2.Driver
+        pool-name: 'read-only-pool'
+        read-only: true
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.H2Dialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create-drop
