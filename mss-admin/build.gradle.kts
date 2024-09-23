@@ -2,7 +2,7 @@ dependencies {
     implementation(project(":module-common"))
     implementation(project(":module-entity"))
 
-    implementation(platform("org.springframework.boot:spring-boot-dependencies:3.2.9"))
+    implementation(platform("org.springframework.boot:spring-boot-dependencies:3.3.4"))
     implementation("org.springframework.boot:spring-boot-starter-actuator")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-data-redis")
