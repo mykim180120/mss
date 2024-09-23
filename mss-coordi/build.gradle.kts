@@ -14,7 +14,7 @@ dependencies {
     implementation("com.google.code.findbugs:jsr305:3.0.2")
     implementation("com.querydsl:querydsl-jpa:5.0.0")
     implementation("com.google.code.gson:gson")
-    implementation("org.projectlombok:lombok:1.18.26")
+    implementation("org.projectlombok:lombok:1.18.34")
     implementation("io.jsonwebtoken:jjwt:0.9.1")
 
     runtimeOnly("net.logstash.logback:logstash-logback-encoder:7.2")
