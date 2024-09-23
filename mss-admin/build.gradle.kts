@@ -29,8 +29,8 @@ dependencies {
     developmentOnly("org.springframework.boot:spring-boot-devtools")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
-    testImplementation("com.squareup.okhttp3:okhttp:4.10.0")
-    testImplementation("com.squareup.okhttp3:mockwebserver:4.10.0")
+    testImplementation("com.squareup.okhttp3:okhttp:4.12.0")
+    testImplementation("com.squareup.okhttp3:mockwebserver:4.12.0")
     testImplementation("org.mockito:mockito-inline:4.9.0")
     testImplementation("com.github.fppt:jedis-mock:1.0.5")
 
